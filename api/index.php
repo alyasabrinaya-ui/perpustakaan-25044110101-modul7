@@ -51,4 +51,9 @@ if (str_starts_with($path, '/build/') || in_array($path, ['/favicon.ico', '/robo
     }
 }
 
+// Samakan lingkungan dengan public/index.php, supaya path /api/... tidak dikira bagian dari base URL
+$_SERVER['SCRIPT_FILENAME'] = __DIR__ . '/../public/index.php';
+$_SERVER['SCRIPT_NAME']     = '/index.php';
+$_SERVER['PHP_SELF']        = '/index.php';
+
 require __DIR__ . '/../public/index.php';
