@@ -43,19 +43,20 @@
     </section>
 
     {{-- ===== Buku Terbaru: tempat pembuktian XSS (A1) ===== --}}
-    <section class="panel">
-        <h2>Buku Terbaru</h2>
-        <ul>
-            @foreach ($bukuTerbaru as $b)
-                <!-- {{-- Soal 1 (A1, RENTAN / XSS): judul tanpa escaping, <script> akan dijalankan browser --}}
-                <li>{!! $b->judul !!}</li> -->
+<section class="panel">
+    <h2>Buku Terbaru</h2>
+    <ul>
+        @foreach ($bukuTerbaru as $b)
 
-                <!-- Soal 2 (a): PERBAIKAN. Blade escaping, judul tampil sebagai teks.
-                     Untuk mengaktifkan: comment baris {!! !!} di atas, lalu hapus pembungkus komentar di bawah. -->
-                <li>{{ $b->judul }}</li>
-            @endforeach
-        </ul>
-    </section>
+            {{-- Soal 1 (A1): Kode rentan XSS --}}
+            {{-- <li>{!! $b->judul !!}</li> --}}
+
+            {{-- Soal 2 (a): Perbaikan menggunakan Blade escaping --}}
+            <li>{{ $b->judul }}</li>
+
+        @endforeach
+    </ul>
+</section>
 
     {{-- Soal 2 (c) + Soal 3: form hapus dengan @csrf dan @method('DELETE'),
          hanya untuk yang boleh kelola buku --}}
