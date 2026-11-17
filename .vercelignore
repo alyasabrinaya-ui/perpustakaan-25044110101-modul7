@@ -1,0 +1,15 @@
+.env
+.env.production
+.git
+node_modules
+vendor
+tests
+phpunit.xml
+storage/logs
+storage/framework
+bootstrap/cache/*.php
+postman
+.postman
+_backup_modul4
+CLAUDE.md
+AGENTS.md

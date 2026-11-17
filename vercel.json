@@ -1,0 +1,13 @@
+{
+  "framework": null,
+  "buildCommand": "echo Build aset dilewati karena public/build sudah di-commit",
+  "installCommand": "echo Install npm dilewati",
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}
