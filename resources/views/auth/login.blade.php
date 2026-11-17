@@ -5,7 +5,7 @@
 @section('content')
     <div class="auth-wrap">
         <div class="page-head">
-            <h1>Login</h1>
+            <h1>Login 25044110101</h1>
             <p>Masuk untuk mengakses perpustakaan.</p>
         </div>
 
